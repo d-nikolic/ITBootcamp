@@ -36,7 +36,7 @@ public class BaseTest {
 
     @BeforeClass
     public void beforeAllMethods() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Darko\\IdeaProjects\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "driver_lib\\chromedriver.exe");
         driver = new ChromeDriver();
         driverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
         driver.navigate().to("https://demoqa.com");
@@ -52,9 +52,9 @@ public class BaseTest {
         modalDialogsPage = new ModalDialogsPage(driver, driverWait);
     }
 
-//    @AfterClass
-//    public void closing() {
-//        getDriver().close();
-//    }
+    @AfterClass
+    public void closing() {
+        getDriver().close();
+    }
 
 }

@@ -1,14 +1,19 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class ModalDialogsTests extends BaseTest {
 
-    @Test(priority = 1)
-    public void verifyThatSmallModalDialogBtnWorks() {
+    @BeforeMethod
+    public void setUp() {
         getHomePage().clickOnAlertsFramesWindows();
         getAlertsWindowsPage().clickOnModalDialogs();
+    }
+
+    @Test(priority = 1)
+    public void verifyThatSmallModalDialogBtnWorks() {
         getModalDialogsPage().clickOnSmallModal();
         //is modal window displayed
         Assert.assertTrue(getModalDialogsPage().isModalWindowDisplayed());
@@ -22,8 +27,6 @@ public class ModalDialogsTests extends BaseTest {
 
     @Test(priority = 2)
     public void verifyThatLargeModalDialogBtnWorks() {
-        getHomePage().clickOnAlertsFramesWindows();
-        getAlertsWindowsPage().clickOnModalDialogs();
         getModalDialogsPage().clickOnLargeModal();
         //is modal window displayed
         Assert.assertTrue(getModalDialogsPage().isModalWindowDisplayed());

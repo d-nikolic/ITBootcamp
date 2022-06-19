@@ -4,7 +4,6 @@ package pages;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 @Data
