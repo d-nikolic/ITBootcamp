@@ -7,4 +7,6 @@ It is a Maven-built project done with the following tech stack:
 **_ChromeDriver_** - 102.0.5005.61 version  
 **_Selenium_** - 4.1.4 version  
 **_TestNg_** - 7.6.0 version  
-**_Project Lombok_** library - 1.18.4 version
+**_Project Lombok_** library - 1.18.4 version  
+
+Test methods should be run individually.
